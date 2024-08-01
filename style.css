@@ -1,0 +1,952 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Orbitron:wght@400..900&display=swap');
+
+/* || Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || General */
+img{
+    display: block;
+    max-width:100%;
+    height: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height:100vh;
+    font: 1.5rem "Orbitron", sans-serif;
+    background-color: black;
+    background-image: url('img/Page_1.png');
+    background-repeat:no-repeat;
+    background-size: 100% auto;
+}
+
+/* || Header */
+header{
+    margin:0rem 1.5rem 1rem;
+    color:whitesmoke;
+    display:flex;
+    justify-content:space-between;
+    gap:3rem;
+    flex-wrap: nowrap;
+}
+
+.main_logo{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+nav{
+    align-self: center;
+}
+nav ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content: space-evenly;
+    gap:2rem;
+    font:0.85rem "Inter",sans-seriff;
+}
+
+nav ul li a:any-link{
+    color:white;
+    text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:focus{
+    text-shadow: 0 0 5px hsl(0, 0%, 96%), 0 0 10px hsl(0, 0%, 97%), 0 0 15px hsl(0, 0%, 99%);
+}
+
+header p,
+.footer_nav p{
+    font: 0.85rem "Inter",sans-seriff;
+    align-self: center;
+}
+
+main{
+    width:100%;
+    min-height:auto;
+    display:flex;
+    flex-direction: column;
+}
+
+
+/* || First page designing with position of images */
+
+#home_pg{
+    width:100%;
+    min-height: 90vh;
+    place-content: top center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 175px 100px repeat(3,1fr)  100px 175px;
+    grid-template-rows: 75px 115px 115px 75px 1fr;
+    border-bottom: 2px solid black;
+}
+
+.large_mtext{
+    font-size:3.25rem;
+    font-weight: bolder;
+    color:whitesmoke;
+    grid-column: 2/7;
+    grid-row: 2/4;
+    place-content:top center;
+    text-align: center;
+    z-index: 4;
+}
+
+.small_mtext{
+    margin-top: 7px;;
+    font:1rem "Inter",sans-seriff;
+    color:whitesmoke;
+    grid-column:3/7;
+    grid-row: 4;
+    place-content:top center;
+    text-align:center;
+    margin-left:30px;
+    margin-right:25px;
+}
+
+.btn_container{
+    grid-column:4/5;
+    grid-row:5/6;
+    place-content:top center;
+    text-align:center;
+}
+
+.btn_1{
+    margin-top:15px;
+    width:150px;
+    height:50px;
+    font: 1rem "Orbitron",sans-seriff;
+    color:whitesmoke;
+    font-weight: bold;
+    border-radius:7px;
+    border-style: none;
+    background-color: rgb(240, 74, 240);
+    background-image: linear-gradient(135deg,rgb(32, 32, 218),rgb(218, 11, 11));   
+}
+
+.btn_1:hover{
+    box-shadow: 0 0 5px hsl(0, 0%, 96%), 0 0 10px hsl(0, 0%, 97%), 0 0 15px hsl(0, 0%, 99%);
+}
+
+
+.sm_mercury{
+    width:125px;
+    margin-left:7px;
+    grid-column: 1;
+    grid-row:1;
+}
+
+.sm_saturn{
+    width:325px;
+    grid-column: 1/4;
+    grid-row:2/6;
+    overflow: hidden;
+}
+
+.sm_saturn img{
+    margin-top:53px;
+    object-fit: none;
+    object-position: right 37%;   
+}  
+
+.sm_venus{
+    margin-left:88px;
+    grid-column: 3/4;
+    grid-row:3/4;
+    width:55px;
+    height:auto;
+}
+
+.sm_earth {
+    margin-top:30px;
+    margin-left:130px;
+    grid-column: 4/5;
+    grid-row:1;
+    width: 75px;
+    height: auto;
+    transform: rotateY(180deg);
+}
+
+.sm_mars{
+    width:275px;
+    height: 300px;
+    margin-top:10px;
+    grid-column:6/8;
+    grid-row:1/2;
+    transform:rotateY(180deg);
+    overflow: hidden;
+}
+
+.sm_mars img{
+    width:200px;
+    height:300px;
+    object-fit: cover;
+    object-position: right 100%;
+}
+
+
+.sm_uranus{
+    grid-column: 1/2;
+    grid-row:5/6;
+    place-content: end center;
+    transform:rotateY(180deg);
+    overflow: hidden;
+}
+.sm_uranus img{
+    object-fit: cover;
+    object-position: right top;
+    width:200px;
+    height:130px;
+}
+
+.sm_jupiter{
+    margin-top:31px;
+    width:275px;
+    height:350px;
+    grid-column: 6/8;
+    grid-row:3/6;
+    place-content: end end;
+    overflow: hidden;
+}
+
+.sm_jupiter img{
+    margin-left: 101px;
+    width:450px;
+    height:450px;
+    object-fit: cover;
+    object-position: right bottom;
+    transform: rotateZ(-90deg);
+}
+
+.sm_neptune{
+    margin-left:73px;
+    grid-column: 4/5;
+    grid-row:5/6;
+    place-content: end center;
+    overflow: hidden;
+}
+
+.sm_neptune img{
+    width:155px;
+    height:100px;
+    object-fit: cover;
+    object-position: 100% top;
+}
+
+
+/* || Second Page having Sun Image */
+
+#sun_pg{
+    width:100%;
+    min-height: 100vh;
+    background-color: black;
+    background-image: url(img/Page_sun.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.lg_sun_pic{
+    grid-column:1/8;
+    grid-row:1/5;
+    overflow:hidden;
+    transform: rotateX(180deg) rotateY(180deg);
+    margin-bottom: 30px;
+    margin-right: 25px;
+    place-content: center center;
+}
+
+.font_sun{
+    grid-column: 1/3;
+    grid-row:3;
+    justify-content:bottom center;
+    margin-top: 62px;
+}
+
+.font_sun h1{
+    color:whitesmoke;
+    font:4.5rem "Orbitron", sans-seriff;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+.para_sun{
+    grid-column:1/6;
+    grid-row:4;
+    margin-top: 52px;
+    margin-left:52px;    
+}
+
+.para_sun p{
+    color:whitesmoke;
+    font:1.25rem "Inter",sans-seriff;
+    text-align: left;
+}
+
+.box_sun{
+    grid-column:1/5;
+    grid-row:5;
+    display:flex;
+    justify-content: space-between;
+    margin-left:52px;
+    margin-top:85px;
+    margin-right:72px;
+    gap:50px;
+}
+
+.box_plt{
+    width:280px;
+    height:120px;
+    padding:2px;
+    background-color: #430E49; 
+    border-radius:7px;
+    border:2px solid #430E49;
+    font:1.75rem "Orbitron",sans-seriff;
+    color:whitesmoke;
+    font-weight: bolder;
+}
+
+
+/* || Basic Layout of Boxes of Diameter and Temperature */
+
+.diameter{
+    background-image: url('img/miles_icon.png'),linear-gradient(135deg,#100A33,#430E49);
+    background-repeat: no-repeat,no-repeat;
+    background-position: left,center;
+    text-align:left,auto;
+}
+
+
+.day_temp{
+    background-image: url('img/day_temp.png'),linear-gradient(135deg,#100A33,#430E49);
+    background-repeat: no-repeat,no-repeat;
+    background-position: 12%,center;
+    text-align:left,auto;
+}
+
+.night_temp{
+    background-image: url('img/night_temp.png'),linear-gradient(135deg,#100A33,#430E49);
+    background-repeat: no-repeat,no-repeat;
+    background-position: 12%,center;
+    text-align:left,auto;
+}
+
+.align{
+    margin-left:90px;
+    margin-top:5px;
+}
+
+.sm_font{
+    font-size:0.85rem;
+    font-weight: normal;
+    margin-left:90px;
+    margin-top:7px;
+}
+
+
+/* || Designing of third page having mercury image */
+
+#mercury_pg{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    background-image: url(img/left_brgt_pg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    place-content: top center;
+}
+
+.lg_mer_pic{
+    grid-column: 1/4;
+    grid-row:1/6;
+    overflow: hidden;
+    margin-right:100px;
+}
+
+.lg_mer_pic img{
+    width:600px;
+    height:620px;
+    object-fit:none;
+    object-position: right center; 
+}
+
+.font_mer{
+    grid-column: 4/8;
+    grid-row:1/3;
+    place-content: center center;
+}
+
+.font_mer h1{
+    color:whitesmoke;
+    font:4.5rem "Orbitron", sans-seriff;
+    font-weight: bolder;
+    margin-left:12px;
+}
+
+.para_mer{
+    grid-column:4/8;
+    grid-row:2/5;
+    place-content:center center;   
+    margin-right:30px;
+}
+
+.para_mer p{
+    color:whitesmoke;
+    font:1.2rem "Inter",sans-seriff;
+    margin-left:12px;
+    margin-bottom:38px;
+}
+
+.box_mer{
+    grid-column: 4/8;
+    grid-row:4/6;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left:12px;
+    margin-right:60px;
+}
+
+/* || Designing of Fourth Page having Venus picture */
+
+#venus_pg{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    background-image: url(img/right_brgt_pg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    place-content: top center;
+}
+
+.lg_ven_pic{
+    grid-column: 4/8;
+    grid-row:1/6;
+    overflow: hidden;
+    margin-left:35px;
+}
+
+.lg_ven_pic img{
+    object-fit:none;
+    object-position: left top;
+    margin-top:27px;
+}
+
+.font_ven{
+    grid-column: 1/4;
+    grid-row:1/3;
+    place-content: center center;
+}
+
+.font_ven h1{
+    color:whitesmoke;
+    font:4.5rem "Orbitron", sans-seriff;
+    font-weight: bolder;
+    margin-left:40px;
+}
+
+.para_ven{
+    grid-column:1/5;
+    grid-row:2/5;
+    place-content:center center;   
+}
+
+.para_ven p{
+    color:whitesmoke;
+    font:1.2rem "Inter",sans-seriff;
+    margin-left:40px;
+    margin-bottom: 65px;
+}
+
+.box_ven{
+    grid-column: 1/4;
+    grid-row:3/6;
+    display:flex;
+    flex-direction: column;
+    gap:40px;
+    margin-left:40px;
+    margin-top:75px;
+}
+
+
+/* || Designing of fifth page having Earth image */
+
+#earth_pg{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    background-image: url(img/left_brgt_pg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    place-content: top center;
+}
+
+.earth_bg_pic{
+    grid-column: 1/8;
+    grid-row: 3/6;
+    overflow:hidden;
+    margin-top:130px;
+}
+
+.lg_earth_pic{
+    grid-column: 1/8;
+    grid-row: 3/6;
+    overflow:hidden;
+    margin-left:50px;
+    margin-top:40px;
+}
+
+.font_earth{
+    grid-column: 1/4;
+    grid-row:1/3;
+    place-content: top center;
+    margin-top:15px;
+    margin-left:40px;
+}
+
+.font_earth h1{
+    color:whitesmoke;
+    font:3.2rem "Orbitron", sans-seriff;
+    font-weight: bolder;
+}
+
+.para_earth{
+    grid-column:1/5;
+    grid-row:2/3;
+    place-content:top center;   
+    margin-top:10px;
+    margin-left:40px;
+}
+
+.para_earth p{
+    color:whitesmoke;
+    font:1.07rem "Inter",sans-seriff;
+}
+
+/* || Designing of Moon around Earth */
+.emoon{
+    grid-column:2/6;
+    grid-row: 3/4;
+    text-align:right;
+    margin-right:150px;
+}
+
+.font_emoon{
+    color:whitesmoke;
+    font:2rem "Orbitron", sans-seriff;
+    font-weight: bold;
+}
+
+.para_emoon{
+    color:whitesmoke;
+    font:1.07rem "Inter",sans-seriff;
+}
+
+.box_earth{
+    grid-column: 5/8;
+    grid-row: 1/2;
+    margin-top:30px;
+    margin-left:50px;
+}
+
+.earth_arrow{
+    grid-column: 5/7;
+    grid-row: 3/5;
+    margin-left:126px;
+}
+
+.earth_rocket{
+    grid-column: 1/3;
+    grid-row:4/6;
+    margin-left: 30px;
+}    
+
+/* || Designing of Sixth Page having Mars image */
+
+#mars_pg{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    background-image: url(img/right_brgt_pg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    place-content: top center;
+}
+
+.lg_mars_pic{
+    grid-column: 1/4;
+    grid-row:3/6;
+    overflow: hidden;
+    margin-right:30px;
+}
+
+.lg_mars_pic img{
+    height:800px;
+    object-fit: none;
+    object-position: right top;
+    margin-top: 20px;
+}
+
+.main_mars_content{
+    grid-column:1/5;
+    grid-row:1/3;
+    text-align: left;
+    margin-left:30px;
+    margin-top:20px;
+}
+
+.heading_font{
+    color:whitesmoke;
+    font:3.2rem "Orbitron", sans-seriff;
+    font-weight: bolder;
+}
+
+.para_font{
+    color:whitesmoke;
+    font:1.07rem "Inter",sans-seriff;
+}
+
+/* Designing of moons of Mars */
+.mars_moon{
+    grid-column:4/6;
+    grid-row: 4/6;
+    text-align:left;
+    margin-left:30px;
+    margin-top:40px;
+    margin-right: 70px;
+}
+
+.mars_moon h3{
+    color:whitesmoke;
+    font:2rem "Orbitron", sans-seriff;
+    font-weight: bold;
+}
+
+.mars_moon p{
+    color:whitesmoke;
+    font:1.07rem "Inter",sans-seriff;
+}
+
+.box_mars{
+    grid-column: 5/8;
+    grid-row:2/6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:3rem;
+    margin-left: 175px;
+} 
+
+.mars_arrow{
+    grid-column: 3/5;
+    grid-row: 3/5;
+    margin-top:80px;
+    margin-left: 140px;
+}
+
+
+/* || Designing of Seventh Page having Jupiter Image */
+
+#jupiter_pg{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    background-image: url(img/right_brgt_pg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    place-content: top center;
+}
+
+.lg_jup_pic{
+    grid-column: 4/8;
+    grid-row:1/6;
+    margin-left: 20px;
+    overflow: hidden;    
+}
+
+.lg_jup_pic img{
+    height: 770px;
+    object-fit: none;
+    object-position: left bottom; 
+}
+
+.main_jup_content{
+    grid-column:1/5;
+    grid-row:1/3;
+    text-align: left;
+    margin-right:140px;
+    margin-left:35px;
+    margin-top:25px;
+}
+
+.box_jup{
+    grid-column: 1/4;
+    grid-row: 3/6;
+    place-content: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left:35px;
+    margin-bottom: 50px;
+    
+}
+
+
+/* || Designing of Eighth Page having Saturn Image */
+#saturn_pg{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    background-image: url(img/right_brgt_pg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    place-content: top center;
+}
+
+.lg_sat_pic{
+    grid-column: 1/5;
+    grid-row:1/6;
+    overflow:hidden;
+    margin-right:120px;
+    margin-top:30px;
+}
+
+.lg_sat_pic img{
+    width:900px;
+    height: 600px;
+    object-fit: none;
+    object-position: right center; 
+}
+
+.main_sat_content{
+    grid-column: 3/7;
+    grid-row:1/3;
+    text-align:right;
+    margin-top: 20px;
+    margin-left:100px;
+}
+
+.box_sat{
+    grid-column: 4/7;
+    grid-row: 3/6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+
+/* || Designing of Ninth Page having Uranus image */
+
+#uranus_pg{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    background-image: url(img/left_brgt_pg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    place-content: top center;
+}
+
+.lg_ura_pic{
+    grid-column: 1/8;
+    grid-row: 3/6;
+    overflow: hidden;
+    margin-top:70px;
+}
+
+.lg_ura_pic img{
+    width:1200px;
+    margin-left: 50px;
+}
+  
+.main_ura_content{
+    grid-column: 1/4;
+    grid-row:1/3;
+    text-align:left;
+    margin-top: 15px;
+    margin-left:30px;
+}
+
+.box_ura{
+    grid-column: 4/8;
+    grid-row: 1/3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* || Designing of Last part having Neptune and Footer */
+
+#last_pg{
+    width:100%;
+    height:160vh;
+}
+
+#nep_pg{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    background-image: url(img/right_brgt_pg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    place-content: top center;
+    grid-column: 1/8;
+    grid-row:1/6;
+} 
+ 
+#contact_pg{
+    width:100%;
+    height:60vh;
+    background-color: black;
+    background-image: url(img/left_brgt_pg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    place-content: top center;
+    grid-column: 1/8;
+    grid-row-end: 7;
+}  
+
+/* || Designing of part having Neptune image */
+.lg_nep_pic{
+    grid-column: 1/8;
+    grid-row: 2/7;
+    overflow: hidden;
+    z-index:5;
+    position:relative;
+}
+
+.lg_nep_pic img{
+    object-fit: none;
+    object-position: 75% 30%;  
+}
+
+.main_nep_content{
+    grid-column: 2/7;
+    grid-row:1/3;
+    text-align:center;
+    margin-top: 10px;
+}
+
+.box_nep{
+    grid-column: 3/6;
+    grid-row: 2/4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    margin-right:30px;
+    margin-left: 30px;
+}
+
+/* || Designing of part having email form */
+.main_contact_box{
+    width:80%;
+    height:46vh;
+    background-color: #1E1E1E;
+    border:4px solid #370D44;
+    border-radius: 35px;
+    margin-top:50px;
+    margin-left:120px;
+    z-index:7;
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.join_community{
+    text-align: center;
+    margin-bottom: 7px;
+    margin-top:20px;
+}
+
+.join_community h3{
+    color:whitesmoke;
+    font:2rem "Orbitron", sans-seriff;
+    font-weight: bolder;
+}
+
+.join_community p{
+    color: whitesmoke;
+    font:1.07rem "Inter",sans-seriff;
+}
+
+.footer_nav{
+    margin:0.5rem 1.5rem 1.5rem;
+    color:whitesmoke;
+    display:flex;
+    justify-content:space-between;
+    gap:2rem;
+    flex-wrap: nowrap;
+}
+
+/* || Designing the email input form */
+form {
+    width:540px;
+    height: 50px;
+    align-self: center;
+    background-color: white;
+    border-radius: 30px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn_2{
+    width:160px;
+    height:40px;
+    font: 1rem "Orbitron",sans-seriff;
+    color:whitesmoke;
+    font-weight: bold;
+    border-radius:20px;
+    border-style: none;
+    background-color: rgb(240, 74, 240);
+    background-image: linear-gradient(135deg,rgb(32, 32, 218),rgb(218, 11, 11));
+    margin-right:6px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sub_arrow{
+    width:30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    align-content: center;   
+}
+
+fieldset{
+    border-style: none;
+    margin-left:10px; 
+    align-content: center;
+}
+
+input{
+    font-size:  1.05rem;
+    color: black;
+    font-weight: bold;
+    border-style: none;
+    width:400px;
+    height: 40px;
+}
+
+input:focus {
+    outline: none;
+}
